@@ -45,8 +45,12 @@ struct SplashScreenView: View {
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
-            .sink(receiveCompletion: { _ in
-                self.data = []
+            .sink(receiveCompletion: { state in
+                switch state {
+                    case .failure:
+                        print("Show error message")
+                    default: ()
+                }
             }) {
                 self.data = $0
             }
