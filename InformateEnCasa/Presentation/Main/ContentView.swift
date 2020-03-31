@@ -7,10 +7,14 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     
-    @State var selected = 0
+    @State private var isAnimating = true
+    @State private var selected = 0
+    
+    var data: [CaseByCCAA]
     private let margin = (UIScreen.main.bounds.width / 2) - 110 - 8
     
     var body: some View {
@@ -21,7 +25,7 @@ struct ContentView: View {
                     Text("Teléfono")
                 }
                 .tag(0)
-            CurrentStateView()
+            CurrentStateView(data: data)
                 .tabItem {
                     Image(systemName: selected == 1 ? "person.3.fill" : "person.3")
                     Text("Estado")
@@ -33,7 +37,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(data: CaseByCCAA.getTestList())
             //.previewDevice(PreviewDevice(rawValue: "iPhone SE"))
     }
 }

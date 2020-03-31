@@ -11,7 +11,7 @@ import SwiftUI
 struct CurrentStateView: View {
     private let margin = (UIScreen.main.bounds.width / 2) - 110 - 8
     
-    @State private var data = [CaseByCCAA]()
+    var data: [CaseByCCAA]
     @State private var currentData = CaseByCCAA.getEmpty()
     
     var body: some View {
@@ -57,8 +57,8 @@ struct CurrentStateView: View {
                         .font(.body)
                         .foregroundColor(Color.gray)
                         .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity)
                         .padding(.horizontal)
-                        .fixedSize()
                 }
                 
                 VStack(spacing: 8) {
@@ -71,8 +71,8 @@ struct CurrentStateView: View {
                         .font(.body)
                         .foregroundColor(Color.gray)
                         .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity)
                         .padding(.horizontal)
-                        .fixedSize()
                 }
                 
                 VStack(spacing: 8) {
@@ -85,8 +85,8 @@ struct CurrentStateView: View {
                         .font(.body)
                         .foregroundColor(Color.gray)
                         .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity)
                         .padding(.horizontal)
-                        .fixedSize()
                 }
                 
                 VStack(spacing: 8) {
@@ -99,18 +99,15 @@ struct CurrentStateView: View {
                         .font(.body)
                         .foregroundColor(Color.gray)
                         .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity)
                         .padding(.horizontal)
-                        .fixedSize()
                 }
             }
             .padding(.vertical)
         }
         .onAppear {
-            CSVManager.shared.parseCSV(url: "https://covid19.isciii.es/resources/serie_historica_acumulados.csv") { (data) in
-                if let data = data {
-                    self.data = data
-                    self.currentData = self.data.first!
-                }
+            if let first = self.data.first {
+                self.currentData = first
             }
         }
     }
@@ -126,6 +123,9 @@ struct CurrentStateView: View {
 
 struct CurrentStateView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentStateView()
+        CurrentStateView(data: [
+            CaseByCCAA(CCAAIsoCode: "AR", date: "30/03/2020", cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX")
+            ]
+        )
     }
 }

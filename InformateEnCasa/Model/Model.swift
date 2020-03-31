@@ -213,4 +213,11 @@ struct CaseByCCAA: Codable {
     static func getEmpty() -> CaseByCCAA {
         CaseByCCAA(CCAAIsoCode: "", date: "", cases: "----", sicks: "----", uci: "----", deads: "----")
     }
+    
+    static func getTestList() -> [CaseByCCAA] {
+        [
+            CaseByCCAA(CCAAIsoCode: "AR", date: "30/03/2020", cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX"),
+            CaseByCCAA(CCAAIsoCode: "AN", date: "30/03/2020", cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX")
+        ]
+    }
 }
