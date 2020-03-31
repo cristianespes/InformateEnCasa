@@ -9,25 +9,25 @@
 import Foundation
 
 enum Region: String, CaseIterable {
-    case andalucia
-    case aragon
-    case asturias
-    case baleares
-    case canarias
-    case cantabria
-    case castillaLaMancha
-    case castillaLeon
-    case catalunya
-    case ceuta
-    case comValenciana
-    case extremadura
-    case galicia
-    case laRioja
-    case madrid
-    case melilla
-    case murcia
-    case navarra
-    case paisVasco
+    case andalucia = "AN"
+    case aragon = "AR"
+    case asturias = "AS"
+    case baleares = "IB"
+    case canarias = "CN"
+    case cantabria = "CB"
+    case castillaLaMancha = "CM"
+    case castillaLeon = "CL"
+    case catalunya = "CT"
+    case ceuta = "CE"
+    case comValenciana = "VC"
+    case extremadura = "EX"
+    case galicia = "GA"
+    case laRioja = "RI"
+    case madrid = "MD"
+    case melilla = "ME"
+    case murcia = "MC"
+    case navarra = "NC"
+    case paisVasco = "PV"
     
     func getName() -> String {
         switch self {
@@ -157,5 +157,60 @@ enum Region: String, CaseIterable {
             return "900203050"
         }
     }
+    
+    static func getIsoCode(by region: Region) -> String {
+        switch region {
+        case .andalucia:
+            return "AN"
+        case .aragon:
+            return "AR"
+        case .asturias:
+            return "AS"
+        case .baleares:
+            return "IB"
+        case .canarias:
+            return "CN"
+        case .cantabria:
+            return "CB"
+        case .castillaLaMancha:
+            return "CM"
+        case .castillaLeon:
+            return "CL"
+        case .catalunya:
+            return "CT"
+        case .ceuta:
+            return "CE"
+        case .comValenciana:
+            return "VC"
+        case .extremadura:
+            return "EX"
+        case .galicia:
+            return "GA"
+        case .laRioja:
+            return "RI"
+        case .madrid:
+            return "MD"
+        case .melilla:
+            return "ME"
+        case .murcia:
+            return "MC"
+        case .navarra:
+            return "NC"
+        case .paisVasco:
+            return"PV"
+        }
+    }
 }
 
+struct CaseByCCAA: Codable {
+    let CCAAIsoCode: String
+    let date: String
+    let cases: String
+    let sicks: String
+    let uci: String
+    let deads: String
+    
+    static func getEmpty() -> CaseByCCAA {
+        CaseByCCAA(CCAAIsoCode: "", date: "", cases: "----", sicks: "----", uci: "----", deads: "----")
+    }
+}
