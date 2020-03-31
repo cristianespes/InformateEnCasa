@@ -48,7 +48,7 @@ struct EmergencyCallView: View {
                     Text("#quédate")
                         .font(.title)
                         .bold()
-                        .foregroundColor(Color(red: 82/255, green: 182/255, blue: 205/255))
+                        .foregroundColor(.primaryBlue)
                     Text("encasa")
                         .font(.title)
                         .bold()

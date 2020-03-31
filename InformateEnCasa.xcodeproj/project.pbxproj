@@ -14,6 +14,7 @@
 		194ABCDD2430003A0052F103 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194ABCDC2430003A0052F103 /* Preview Assets.xcassets */; };
 		194ABCE02430003A0052F103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194ABCDE2430003A0052F103 /* LaunchScreen.storyboard */; };
 		194ABCEA2430127D0052F103 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194ABCE92430127D0052F103 /* Model.swift */; };
+		195070FB2433966D00C4BB37 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195070FA2433966D00C4BB37 /* Color+Extension.swift */; };
 		19A045FB243262DD0064D384 /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FA243262DD0064D384 /* CSVManager.swift */; };
 		19A045FE243265740064D384 /* CardCCAAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FD243265740064D384 /* CardCCAAView.swift */; };
 		19A04600243268D50064D384 /* EmergencyCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FF243268D50064D384 /* EmergencyCallView.swift */; };
@@ -30,6 +31,7 @@
 		194ABCDF2430003A0052F103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		194ABCE12430003A0052F103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		194ABCE92430127D0052F103 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		195070FA2433966D00C4BB37 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		19A045FA243262DD0064D384 /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
 		19A045FD243265740064D384 /* CardCCAAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCCAAView.swift; sourceTree = "<group>"; };
 		19A045FF243268D50064D384 /* EmergencyCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCallView.swift; sourceTree = "<group>"; };
@@ -68,16 +70,15 @@
 			children = (
 				194ABCD3243000370052F103 /* AppDelegate.swift */,
 				194ABCD5243000370052F103 /* SceneDelegate.swift */,
-				194ABCD7243000370052F103 /* ContentView.swift */,
-				19A04601243269BE0064D384 /* Emergency Call */,
-				19A0460424326FE80064D384 /* Current State */,
+				19A4D3662433978A00730BE5 /* Extensions */,
+				19A4D367243397AB00730BE5 /* Presentation */,
 				19A045FC243265530064D384 /* Custom Views */,
+				19A4D368243397CB00730BE5 /* Model */,
+				19A045F9243262CC0064D384 /* Manager */,
 				194ABCD92430003A0052F103 /* Assets.xcassets */,
 				194ABCDE2430003A0052F103 /* LaunchScreen.storyboard */,
 				194ABCE12430003A0052F103 /* Info.plist */,
 				194ABCDB2430003A0052F103 /* Preview Content */,
-				194ABCE92430127D0052F103 /* Model.swift */,
-				19A045F9243262CC0064D384 /* Manager */,
 			);
 			path = InformateEnCasa;
 			sourceTree = "<group>";
@@ -120,6 +121,32 @@
 				19A0460224326FD50064D384 /* CurrentStateView.swift */,
 			);
 			path = "Current State";
+			sourceTree = "<group>";
+		};
+		19A4D3662433978A00730BE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				195070FA2433966D00C4BB37 /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		19A4D367243397AB00730BE5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				194ABCD7243000370052F103 /* ContentView.swift */,
+				19A04601243269BE0064D384 /* Emergency Call */,
+				19A0460424326FE80064D384 /* Current State */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		19A4D368243397CB00730BE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				194ABCE92430127D0052F103 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +226,7 @@
 				194ABCD4243000370052F103 /* AppDelegate.swift in Sources */,
 				19A045FB243262DD0064D384 /* CSVManager.swift in Sources */,
 				194ABCD6243000370052F103 /* SceneDelegate.swift in Sources */,
+				195070FB2433966D00C4BB37 /* Color+Extension.swift in Sources */,
 				19A045FE243265740064D384 /* CardCCAAView.swift in Sources */,
 				194ABCD8243000370052F103 /* ContentView.swift in Sources */,
 			);
@@ -349,7 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.celapps.informateencasa;
 				PRODUCT_NAME = "Infórmate en casa";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -370,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.celapps.informateencasa;
 				PRODUCT_NAME = "Infórmate en casa";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
