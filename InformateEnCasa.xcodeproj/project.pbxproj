@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		194ABCD0243000370052F103 /* Infórmate en casa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Infórmate en casa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		194ABCD0243000370052F103 /* InformateEnCasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InformateEnCasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194ABCD3243000370052F103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		194ABCD5243000370052F103 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		194ABCD7243000370052F103 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		194ABCD1243000370052F103 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				194ABCD0243000370052F103 /* Infórmate en casa.app */,
+				194ABCD0243000370052F103 /* InformateEnCasa.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 			);
 			name = InformateEnCasa;
 			productName = InformateEnCasa;
-			productReference = 194ABCD0243000370052F103 /* Infórmate en casa.app */;
+			productReference = 194ABCD0243000370052F103 /* InformateEnCasa.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -375,7 +375,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.celapps.informateencasa;
-				PRODUCT_NAME = "Infórmate en casa";
+				PRODUCT_NAME = InformateEnCasa;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -396,7 +396,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.celapps.informateencasa;
-				PRODUCT_NAME = "Infórmate en casa";
+				PRODUCT_NAME = InformateEnCasa;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
