@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SplashScreenView: View {
     
@@ -14,7 +15,9 @@ struct SplashScreenView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        Group {
+        var subscribers = Set<AnyCancellable>()
+        
+        return Group {
             if data.count == 0 {
                 ZStack {
                     //Color.primaryBlue.edgesIgnoringSafeArea(.all)
@@ -31,11 +34,23 @@ struct SplashScreenView: View {
             }
         }
         .onAppear {
-            CSVManager.shared.parseCSV(url: "https://covid19.isciii.es/resources/serie_historica_acumulados.csv") { (data) in
-                if let data = data {
-                    self.data = data
-                }
+            let url = URL(string: "https://covid19.isciii.es/resources/serie_historica_acumulados.csv")!
+            URLSession.shared
+            .dataTaskPublisher(for: url)
+            .map {
+                String(data: $0.data, encoding: .ascii)
             }
+            .map { string -> [CaseByCCAA] in
+                CSVManager.shared.parseCSV(dataString: string) ?? []
+            }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+            .sink(receiveCompletion: { _ in
+                self.data = []
+            }) {
+                self.data = $0
+            }
+            .store(in: &subscribers)
         }
     }
 }
