@@ -6,6 +6,7 @@ target 'InformateEnCasa' do
   use_frameworks!
 
   # Pods for InformateEnCasa
+  pod 'Firebase/Crashlytics'
   pod 'Firebase/Analytics'
 
 end
