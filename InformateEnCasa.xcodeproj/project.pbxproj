@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,9 +21,11 @@
 		19A045FE243265740064D384 /* CardCCAAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FD243265740064D384 /* CardCCAAView.swift */; };
 		19A04600243268D50064D384 /* EmergencyCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FF243268D50064D384 /* EmergencyCallView.swift */; };
 		19A0460324326FD50064D384 /* CurrentStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A0460224326FD50064D384 /* CurrentStateView.swift */; };
+		FEA440DA0DC462B7BABEDBC2 /* Pods_InformateEnCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604535CA9B3F8F26399C4BC /* Pods_InformateEnCasa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030F803D87D702109D6F9DD9 /* Pods-InformateEnCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InformateEnCasa.release.xcconfig"; path = "Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa.release.xcconfig"; sourceTree = "<group>"; };
 		194ABCD0243000370052F103 /* InformateEnCasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InformateEnCasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194ABCD3243000370052F103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		194ABCD5243000370052F103 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,10 @@
 		19A045FD243265740064D384 /* CardCCAAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCCAAView.swift; sourceTree = "<group>"; };
 		19A045FF243268D50064D384 /* EmergencyCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCallView.swift; sourceTree = "<group>"; };
 		19A0460224326FD50064D384 /* CurrentStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStateView.swift; sourceTree = "<group>"; };
+		19D53FE324350F6C001BA50E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19D53FE9243511F1001BA50E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B604535CA9B3F8F26399C4BC /* Pods_InformateEnCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InformateEnCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8213C9E312B12907A75A20F /* Pods-InformateEnCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InformateEnCasa.debug.xcconfig"; path = "Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA440DA0DC462B7BABEDBC2 /* Pods_InformateEnCasa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +65,8 @@
 			children = (
 				194ABCD2243000370052F103 /* InformateEnCasa */,
 				194ABCD1243000370052F103 /* Products */,
+				C3B905D3BB9D28197C10D43F /* Pods */,
+				40A4D0DC1FDEE215F30DD34B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +92,7 @@
 				194ABCDE2430003A0052F103 /* LaunchScreen.storyboard */,
 				194ABCE12430003A0052F103 /* Info.plist */,
 				194ABCDB2430003A0052F103 /* Preview Content */,
+				19D53FE024350F3C001BA50E /* Firebase */,
 			);
 			path = InformateEnCasa;
 			sourceTree = "<group>";
@@ -171,6 +181,48 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		19D53FE024350F3C001BA50E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				19D53FE8243511F1001BA50E /* Debug */,
+				19D53FE124350F51001BA50E /* Release */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		19D53FE124350F51001BA50E /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				19D53FE324350F6C001BA50E /* GoogleService-Info.plist */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
+		19D53FE8243511F1001BA50E /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				19D53FE9243511F1001BA50E /* GoogleService-Info.plist */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		40A4D0DC1FDEE215F30DD34B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B604535CA9B3F8F26399C4BC /* Pods_InformateEnCasa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3B905D3BB9D28197C10D43F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8213C9E312B12907A75A20F /* Pods-InformateEnCasa.debug.xcconfig */,
+				030F803D87D702109D6F9DD9 /* Pods-InformateEnCasa.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 194ABCE42430003A0052F103 /* Build configuration list for PBXNativeTarget "InformateEnCasa" */;
 			buildPhases = (
+				5C6159BC7E4C30B2BBAF339E /* [CP] Check Pods Manifest.lock */,
 				194ABCCC243000370052F103 /* Sources */,
 				194ABCCD243000370052F103 /* Frameworks */,
 				194ABCCE243000370052F103 /* Resources */,
+				41E33D144E5D2C502D77E5C9 /* [CP] Embed Pods Frameworks */,
+				19D53FE724351088001BA50E /* Setup Firebase Environment GoogleServices-Info.plist */,
 			);
 			buildRules = (
 			);
@@ -236,6 +291,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19D53FE724351088001BA50E /* Setup Firebase Environment GoogleServices-Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Setup Firebase Environment GoogleServices-Info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/InformateEnCasa/Firebase/Debug/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/InformateEnCasa/Firebase/Release/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\necho \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\nexit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\necho \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\nexit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Release\" ]\nthen\necho \"Using ${GOOGLESERVICE_INFO_PROD}\"\ncp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelse\necho \"Using ${GOOGLESERVICE_INFO_DEV}\"\ncp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n";
+		};
+		41E33D144E5D2C502D77E5C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C6159BC7E4C30B2BBAF339E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InformateEnCasa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		194ABCCC243000370052F103 /* Sources */ = {
@@ -386,6 +501,7 @@
 		};
 		194ABCE52430003A0052F103 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8213C9E312B12907A75A20F /* Pods-InformateEnCasa.debug.xcconfig */;
 			buildSettings = {
 				APP_DISPLAY_NAME = "Debug Infórmate en casa";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -408,6 +524,7 @@
 		};
 		194ABCE62430003A0052F103 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 030F803D87D702109D6F9DD9 /* Pods-InformateEnCasa.release.xcconfig */;
 			buildSettings = {
 				APP_DISPLAY_NAME = "Infórmate en casa";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
