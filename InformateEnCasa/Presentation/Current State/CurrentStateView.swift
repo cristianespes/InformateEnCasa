@@ -10,136 +10,133 @@ import SwiftUI
 
 struct CurrentStateView: View {
     
-    private let dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeZone = .none
-        dateFormatter.locale = Locale(identifier: "es_ES")
-        
-        return dateFormatter
-    }()
-    
     @ObservedObject var viewModel: CurrentStateViewModel
     
     private let margin = (UIScreen.main.bounds.width / 2) - 110 - 8
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack(spacing: 30) {
-                Text("Elige tu comunidad autónoma")
+            VStack(spacing: 16) {
+                Text("Estado según la comunidad autónoma")
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
+                    .animation(.none)
                 
-                Text("Seleccione la bandera para mostrar los datos")
-                    .font(.body)
-                    .foregroundColor(Color.gray)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
+                Group {
+                    Text("Pulse aquí para seleccionar una comunidad autónoma y mostrar sus datos")
+                        .font(.body)
+                        .foregroundColor(Color.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                    
+                    Text(self.viewModel.regions[viewModel.currentSelection].getName())
+                        .font(.title)
+                        .bold()
+                        .padding(.bottom, viewModel.showPicker ? 0 : 16)
+                }
+                .animation(.none)
+                .onTapGesture {
+                    self.viewModel.showPicker.toggle()
+                }
                 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(Region.allCases, id: \.self) { region in
-                            VStack(spacing: 20) {
-                                CardCCAAView(region: region)
-                                
-                                Text(region.getName())
-                                    .foregroundColor(Color.gray)
-                                    .bold()
-                                
-                                VStack(spacing: 8) {
-                                    Text("Última actualización")
-                                        .font(.body)
-                                        .foregroundColor(Color.gray)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                    
-                                    Text(self.getDate(from: self.showData(with: region).date))
-                                        .font(.title)
-                                        .multilineTextAlignment(.center)
-                                        .frame(maxWidth: .infinity)
-                                        .padding(.horizontal)
-                                }
-                                
-                                VStack(spacing: 8) {
-                                    Text("Infectados")
-                                        .font(.body)
-                                        .foregroundColor(Color.gray)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                    
-                                    Text(self.showData(with: region).cases)
-                                        .font(.title)
-                                        .multilineTextAlignment(.center)
-                                        .frame(maxWidth: .infinity)
-                                        .padding(.horizontal)
-                                }
-                                
-                                VStack(spacing: 8) {
-                                    Text("Hospitalizados")
-                                        .font(.body)
-                                        .foregroundColor(Color.gray)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                    
-                                    Text(self.showData(with: region).sicks)
-                                        .font(.title)
-                                        .multilineTextAlignment(.center)
-                                        .frame(maxWidth: .infinity)
-                                        .padding(.horizontal)
-                                }
-                                
-                                VStack(spacing: 8) {
-                                    Text("UCI")
-                                        .font(.body)
-                                        .foregroundColor(Color.gray)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                    
-                                    Text(self.showData(with: region).uci)
-                                        .font(.title)
-                                        .multilineTextAlignment(.center)
-                                        .frame(maxWidth: .infinity)
-                                        .padding(.horizontal)
-                                }
-                                
-                                VStack(spacing: 8) {
-                                    Text("Fallecidos")
-                                        .font(.body)
-                                        .foregroundColor(Color.gray)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal)
-                                    
-                                    Text(self.showData(with: region).deads)
-                                        .font(.title)
-                                        .multilineTextAlignment(.center)
-                                        .frame(maxWidth: .infinity)
-                                        .padding(.horizontal)
-                                }
+                if viewModel.showPicker {
+                    Picker(selection: $viewModel.currentSelection, label: Text("")) {
+                        ForEach(0...viewModel.regions.count - 1, id: \.self) { index in
+                            HStack {
+                                Image(self.viewModel.regions[index].getImage())
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
+                                Spacer()
+                                Text(self.viewModel.regions[index].getName())
                             }
+                            .tag(index)
                         }
                     }
-                    .padding(.horizontal, self.margin)
+                    .labelsHidden()
+                    .onTapGesture {
+                        self.viewModel.showPicker.toggle()
+                    }
                 }
+                
+                VStack(spacing: 20) {
+                    VStack(spacing: 8) {
+                        Text("Última actualización")
+                            .font(.body)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                        
+                        Text(self.viewModel.getDate())
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal)
+                    }
+                    
+                    VStack(spacing: 8) {
+                        Text("Infectados")
+                            .font(.body)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                        
+                        Text(self.viewModel.getData().cases)
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal)
+                    }
+                    
+                    VStack(spacing: 8) {
+                        Text("Hospitalizados")
+                            .font(.body)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                        
+                        Text(self.viewModel.getData().sicks)
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal)
+                    }
+                    
+                    VStack(spacing: 8) {
+                        Text("UCI")
+                            .font(.body)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                        
+                        Text(self.viewModel.getData().uci)
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal)
+                    }
+                    
+                    VStack(spacing: 8) {
+                        Text("Fallecidos")
+                            .font(.body)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                        
+                        Text(self.viewModel.getData().deads)
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal)
+                    }
+                }
+                .animation(.none)
             }
             .padding(.vertical)
+            .animation(.default)
         }
-    }
-    
-    private func showData(with region: Region) -> CaseByCCAA {
-        if let current = viewModel.data.filter({ $0.CCAAIsoCode == Region.getIsoCode(by: region) }).first {
-            return current
-        } else {
-            return CaseByCCAA.getEmpty()
-        }
-    }
-    
-    private func getDate(from date: Date?) -> String {
-        if let date = date {
-            return dateFormatter.string(from: date)
-        }
-        return dateFormatter.string(from: Calendar.current.date(byAdding: .day, value: -1, to: Date())!)
     }
 }
 

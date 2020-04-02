@@ -15,7 +15,7 @@ struct EmergencyCallView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 30) {
-                Text("Elige tu comunidad autónoma")
+                Text("Teléfono de información según la comunidad autónoma")
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.center)
