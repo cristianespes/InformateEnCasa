@@ -11,14 +11,12 @@ import Combine
 
 struct SplashScreenView: View {
     
-    @State var data = [CaseByCCAA]()
+    @ObservedObject private var viewModel = SplashScreenViewModel()
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        var subscribers = Set<AnyCancellable>()
-        
         return Group {
-            if data.count == 0 {
+            if viewModel.data.count == 0 {
                 ZStack {
                     //Color.primaryBlue.edgesIgnoringSafeArea(.all)
                     
@@ -30,37 +28,16 @@ struct SplashScreenView: View {
                     .padding(60)
                 }
             } else {
-                ContentView(data: data)
+                ContentView(viewModel: ContentViewModel(data: viewModel.data))
             }
-        }
-        .onAppear {
-            let url = URL(string: "https://covid19.isciii.es/resources/serie_historica_acumulados.csv")!
-            URLSession.shared
-            .dataTaskPublisher(for: url)
-            .map {
-                String(data: $0.data, encoding: .ascii)
-            }
-            .map { string -> [CaseByCCAA] in
-                CSVManager.shared.parseCSV(dataString: string) ?? []
-            }
-            .receive(on: DispatchQueue.main)
-            .eraseToAnyPublisher()
-            .sink(receiveCompletion: { state in
-                switch state {
-                    case .failure:
-                        print("Show error message")
-                    default: ()
-                }
-            }) {
-                self.data = $0
-            }
-            .store(in: &subscribers)
         }
     }
 }
 
+#if DEBUG
 struct SplashScreenView_Previews: PreviewProvider {
     static var previews: some View {
         SplashScreenView()
     }
 }
+#endif

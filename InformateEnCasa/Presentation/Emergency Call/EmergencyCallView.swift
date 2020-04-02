@@ -10,6 +10,7 @@ import SwiftUI
 
 struct EmergencyCallView: View {
     private let margin = (UIScreen.main.bounds.width / 2) - 110 - 8
+    @ObservedObject private var viewModel = EmergencyCallViewModel()
     
     var body: some View {
         ScrollView {
@@ -28,7 +29,7 @@ struct EmergencyCallView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(Region.allCases, id: \.self) { region in
+                        ForEach(viewModel.regions, id: \.self) { region in
                             VStack(spacing: 20) {
                                 CardCCAAView(region: region)
                                 .onTapGesture {
@@ -71,8 +72,10 @@ struct EmergencyCallView: View {
     }
 }
 
+#if DEBUG
 struct EmergencyCallView_Previews: PreviewProvider {
     static var previews: some View {
         EmergencyCallView()
     }
 }
+#endif

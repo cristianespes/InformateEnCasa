@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190AA94B243636AA00A0AAF6 /* EmergencyCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190AA94A243636AA00A0AAF6 /* EmergencyCallViewModel.swift */; };
 		194ABCD4243000370052F103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194ABCD3243000370052F103 /* AppDelegate.swift */; };
 		194ABCD6243000370052F103 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194ABCD5243000370052F103 /* SceneDelegate.swift */; };
 		194ABCD8243000370052F103 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194ABCD7243000370052F103 /* ContentView.swift */; };
@@ -17,6 +18,9 @@
 		195070FB2433966D00C4BB37 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195070FA2433966D00C4BB37 /* Color+Extension.swift */; };
 		195F19BD2433A2B4001581EC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F19BC2433A2B4001581EC /* ActivityIndicator.swift */; };
 		195F19C02433A6E5001581EC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F19BF2433A6E5001581EC /* SplashScreenView.swift */; };
+		199AEB7B24363A4F00DF8477 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199AEB7A24363A4F00DF8477 /* SplashScreenViewModel.swift */; };
+		199AEB7D24363CAB00DF8477 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199AEB7C24363CAB00DF8477 /* ContentViewModel.swift */; };
+		199AEB7F2436410C00DF8477 /* CurrentStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199AEB7E2436410C00DF8477 /* CurrentStateViewModel.swift */; };
 		19A045FB243262DD0064D384 /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FA243262DD0064D384 /* CSVManager.swift */; };
 		19A045FE243265740064D384 /* CardCCAAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FD243265740064D384 /* CardCCAAView.swift */; };
 		19A04600243268D50064D384 /* EmergencyCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FF243268D50064D384 /* EmergencyCallView.swift */; };
@@ -26,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		030F803D87D702109D6F9DD9 /* Pods-InformateEnCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InformateEnCasa.release.xcconfig"; path = "Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa.release.xcconfig"; sourceTree = "<group>"; };
+		190AA94A243636AA00A0AAF6 /* EmergencyCallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCallViewModel.swift; sourceTree = "<group>"; };
 		194ABCD0243000370052F103 /* InformateEnCasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InformateEnCasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194ABCD3243000370052F103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		194ABCD5243000370052F103 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		195070FA2433966D00C4BB37 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		195F19BC2433A2B4001581EC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		195F19BF2433A6E5001581EC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		199AEB7A24363A4F00DF8477 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
+		199AEB7C24363CAB00DF8477 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		199AEB7E2436410C00DF8477 /* CurrentStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStateViewModel.swift; sourceTree = "<group>"; };
 		19A045FA243262DD0064D384 /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
 		19A045FD243265740064D384 /* CardCCAAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCCAAView.swift; sourceTree = "<group>"; };
 		19A045FF243268D50064D384 /* EmergencyCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCallView.swift; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				195F19BF2433A6E5001581EC /* SplashScreenView.swift */,
+				199AEB7A24363A4F00DF8477 /* SplashScreenViewModel.swift */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -117,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				194ABCD7243000370052F103 /* ContentView.swift */,
+				199AEB7C24363CAB00DF8477 /* ContentViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -142,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				19A045FF243268D50064D384 /* EmergencyCallView.swift */,
+				190AA94A243636AA00A0AAF6 /* EmergencyCallViewModel.swift */,
 			);
 			path = "Emergency Call";
 			sourceTree = "<group>";
@@ -150,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				19A0460224326FD50064D384 /* CurrentStateView.swift */,
+				199AEB7E2436410C00DF8477 /* CurrentStateViewModel.swift */,
 			);
 			path = "Current State";
 			sourceTree = "<group>";
@@ -377,16 +389,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199AEB7F2436410C00DF8477 /* CurrentStateViewModel.swift in Sources */,
 				19A0460324326FD50064D384 /* CurrentStateView.swift in Sources */,
 				19A04600243268D50064D384 /* EmergencyCallView.swift in Sources */,
 				194ABCEA2430127D0052F103 /* Model.swift in Sources */,
 				194ABCD4243000370052F103 /* AppDelegate.swift in Sources */,
+				199AEB7B24363A4F00DF8477 /* SplashScreenViewModel.swift in Sources */,
 				195F19C02433A6E5001581EC /* SplashScreenView.swift in Sources */,
 				19A045FB243262DD0064D384 /* CSVManager.swift in Sources */,
 				194ABCD6243000370052F103 /* SceneDelegate.swift in Sources */,
 				195F19BD2433A2B4001581EC /* ActivityIndicator.swift in Sources */,
 				195070FB2433966D00C4BB37 /* Color+Extension.swift in Sources */,
+				199AEB7D24363CAB00DF8477 /* ContentViewModel.swift in Sources */,
 				19A045FE243265740064D384 /* CardCCAAView.swift in Sources */,
+				190AA94B243636AA00A0AAF6 /* EmergencyCallViewModel.swift in Sources */,
 				194ABCD8243000370052F103 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
