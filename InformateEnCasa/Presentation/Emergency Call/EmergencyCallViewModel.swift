@@ -10,14 +10,7 @@ import Combine
 
 final class EmergencyCallViewModel: ObservableObject {
     
-    public private(set) var regions: [Region] = [] {
-        willSet {
-            self.objectWillChange.send()
-        }
-    }
-
-    // MARK: - Bindable Object Protocol -
-    public var objectWillChange = PassthroughSubject<Void, Never>()
+    @Published public private(set) var regions: [Region] = []
     
     public init() {
         self.fetchRegions()

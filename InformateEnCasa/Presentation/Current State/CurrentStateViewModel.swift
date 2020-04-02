@@ -8,14 +8,11 @@
 
 import Combine
 
-final class CurrentStateViewModel: ObservableObject {
+final class CurrentStateViewModel: ObservableObject, Identifiable {
     
-    public private(set) var data: [CaseByCCAA]
+    @Published public private(set) var data: [CaseByCCAA]
     public private(set) var regions: [Region] = Region.allCases
-        
-    // MARK: - Bindable Object Protocol -
-    public var objectWillChange = PassthroughSubject<Void, Never>()
-    
+            
     init(data: [CaseByCCAA]) {
         self.data = data
     }

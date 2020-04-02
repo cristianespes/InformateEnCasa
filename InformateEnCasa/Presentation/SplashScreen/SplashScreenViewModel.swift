@@ -13,14 +13,7 @@ final class SplashScreenViewModel: ObservableObject {
     
     private var subscribers = Set<AnyCancellable>()
     
-    public private(set) var data: [CaseByCCAA] = [] {
-        willSet {
-            self.objectWillChange.send()
-        }
-    }
-
-    // MARK: - Bindable Object Protocol -
-    public var objectWillChange = PassthroughSubject<Void, Never>()
+    @Published public private(set) var data: [CaseByCCAA] = []
     
     public init() {
         self.fetchCCAAInformation()
