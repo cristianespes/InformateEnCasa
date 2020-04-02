@@ -35,15 +35,23 @@ final class CSVManager {
             }
 
             let contents = String(data: data, encoding: .ascii)
-            completionHandler(self?.parseCSV(dataString: contents))
+            completionHandler(self?.parseCSVfromCaseByCCAA(dataString: contents))
         }.resume()
     }
 
-    func parseCSV(dataString: String?) -> [CaseByCCAA]? {
+    func parseCSVfromCaseByCCAA(dataString: String?) -> [CaseByCCAA]? {
         guard let data = dataString, !data.isEmpty else {
             print("Contenido vacío")
             return nil
         }
+        
+        let dateFormatter: DateFormatter = {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            dateFormatter.timeZone = .none
+            
+            return dateFormatter
+        }()
        
         var items = [CaseByCCAA]()
         let lines: [String] = data.components(separatedBy: NSCharacterSet.newlines) as [String]
@@ -84,22 +92,13 @@ final class CSVManager {
                values = line.components(separatedBy: ",")
            }
 
-                let caseByCCAA = CaseByCCAA(CCAAIsoCode: values[0], date: values[1], cases: values[2], sicks: values[3], uci: values[4], deads: values[5])
+                let caseByCCAA = CaseByCCAA(CCAAIsoCode: values[0], date: dateFormatter.date(from: values[1]), cases: values[2], sicks: values[3], uci: values[4], deads: values[5])
                 items.append(caseByCCAA)
             }
         }
         
-        let lastDate = items.compactMap { $0.date }.filter { !$0.isEmpty }.last
+        let lastDate = items.compactMap { $0.date }.last
         items = items.filter { $0.date == lastDate }
-//            items.forEach {
-//                print("---------- ---------- ---------- ---------- ---------- ---------- ---------- ")
-//                print("CCCAA: \($0.CCAAIsoCode)")
-//                print("Fecha: \($0.date)")
-//                print("Casos: \($0.cases)")
-//                print("Hospitalizados: \($0.sicks)")
-//                print("UCI: \($0.uci)")
-//                print("Fallecidos: \($0.deads)")
-//            }
         
         return items
     }

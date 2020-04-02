@@ -10,12 +10,21 @@ import SwiftUI
 
 struct CurrentStateView: View {
     
+    private let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeZone = .none
+        dateFormatter.locale = Locale(identifier: "es_ES")
+        
+        return dateFormatter
+    }()
+    
     @ObservedObject var viewModel: CurrentStateViewModel
     
     private let margin = (UIScreen.main.bounds.width / 2) - 110 - 8
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: 30) {
                 Text("Elige tu comunidad autónoma")
                     .font(.largeTitle)
@@ -40,14 +49,28 @@ struct CurrentStateView: View {
                                     .bold()
                                 
                                 VStack(spacing: 8) {
-                                    Text("Infectados")
+                                    Text("Última actualización")
+                                        .font(.body)
+                                        .foregroundColor(Color.gray)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal)
+                                    
+                                    Text(self.getDate(from: self.showData(with: region).date))
                                         .font(.title)
+                                        .multilineTextAlignment(.center)
+                                        .frame(maxWidth: .infinity)
+                                        .padding(.horizontal)
+                                }
+                                
+                                VStack(spacing: 8) {
+                                    Text("Infectados")
+                                        .font(.body)
+                                        .foregroundColor(Color.gray)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
                                     
                                     Text(self.showData(with: region).cases)
-                                        .font(.body)
-                                        .foregroundColor(Color.gray)
+                                        .font(.title)
                                         .multilineTextAlignment(.center)
                                         .frame(maxWidth: .infinity)
                                         .padding(.horizontal)
@@ -55,13 +78,13 @@ struct CurrentStateView: View {
                                 
                                 VStack(spacing: 8) {
                                     Text("Hospitalizados")
-                                        .font(.title)
+                                        .font(.body)
+                                        .foregroundColor(Color.gray)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
                                     
                                     Text(self.showData(with: region).sicks)
-                                        .font(.body)
-                                        .foregroundColor(Color.gray)
+                                        .font(.title)
                                         .multilineTextAlignment(.center)
                                         .frame(maxWidth: .infinity)
                                         .padding(.horizontal)
@@ -69,13 +92,13 @@ struct CurrentStateView: View {
                                 
                                 VStack(spacing: 8) {
                                     Text("UCI")
-                                        .font(.title)
+                                        .font(.body)
+                                        .foregroundColor(Color.gray)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
                                     
                                     Text(self.showData(with: region).uci)
-                                        .font(.body)
-                                        .foregroundColor(Color.gray)
+                                        .font(.title)
                                         .multilineTextAlignment(.center)
                                         .frame(maxWidth: .infinity)
                                         .padding(.horizontal)
@@ -83,13 +106,13 @@ struct CurrentStateView: View {
                                 
                                 VStack(spacing: 8) {
                                     Text("Fallecidos")
-                                        .font(.title)
+                                        .font(.body)
+                                        .foregroundColor(Color.gray)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal)
                                     
                                     Text(self.showData(with: region).deads)
-                                        .font(.body)
-                                        .foregroundColor(Color.gray)
+                                        .font(.title)
                                         .multilineTextAlignment(.center)
                                         .frame(maxWidth: .infinity)
                                         .padding(.horizontal)
@@ -110,6 +133,13 @@ struct CurrentStateView: View {
         } else {
             return CaseByCCAA.getEmpty()
         }
+    }
+    
+    private func getDate(from date: Date?) -> String {
+        if let date = date {
+            return dateFormatter.string(from: date)
+        }
+        return dateFormatter.string(from: Calendar.current.date(byAdding: .day, value: -1, to: Date())!)
     }
 }
 

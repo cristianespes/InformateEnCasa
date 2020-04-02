@@ -204,20 +204,20 @@ enum Region: String, CaseIterable {
 
 struct CaseByCCAA: Codable {
     let CCAAIsoCode: String
-    let date: String
+    let date: Date?
     let cases: String
     let sicks: String
     let uci: String
     let deads: String
     
     static func getEmpty() -> CaseByCCAA {
-        CaseByCCAA(CCAAIsoCode: "", date: "", cases: "----", sicks: "----", uci: "----", deads: "----")
+        CaseByCCAA(CCAAIsoCode: "", date: Date(), cases: "----", sicks: "----", uci: "----", deads: "----")
     }
     
     static func getTestList() -> [CaseByCCAA] {
         [
-            CaseByCCAA(CCAAIsoCode: "AR", date: "30/03/2020", cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX"),
-            CaseByCCAA(CCAAIsoCode: "AN", date: "30/03/2020", cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX")
+            CaseByCCAA(CCAAIsoCode: "AR", date: Date(), cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX"),
+            CaseByCCAA(CCAAIsoCode: "AN", date: Date(), cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX")
         ]
     }
 }

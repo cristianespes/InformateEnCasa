@@ -36,7 +36,7 @@ final class SplashScreenViewModel: ObservableObject {
             String(data: $0.data, encoding: .ascii)
         }
         .map { string -> [CaseByCCAA] in
-            CSVManager.shared.parseCSV(dataString: string) ?? []
+            CSVManager.shared.parseCSVfromCaseByCCAA(dataString: string) ?? []
         }
         .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
