@@ -21,16 +21,31 @@ struct SplashScreenView: View {
                     //Color.primaryBlue.edgesIgnoringSafeArea(.all)
                     
                     Image("homeApp")
-                    .resizable()
-                    .renderingMode(.template)
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(colorScheme == .dark ? Color.white : Color.primaryBlue)
-                    .padding(60)
+                        .resizable()
+                        .renderingMode(.template)
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(colorScheme == .dark ? Color.white : Color.primaryBlue)
+                        .padding(60)
                 }
             } else {
                 ContentView(viewModel: ContentViewModel(data: viewModel.data))
             }
         }
+        .alert(isPresented: $viewModel.isLostNetwork) {
+            Alert(title: Text("Atención"), message: Text("No hay conexión a Internet"), primaryButton:
+                .default(Text("Aceptar"))
+                , secondaryButton: .default(Text("Ajustes"), action: {
+                    self.openSettings()
+                })
+            )
+        }
+    }
+    
+    private func openSettings() {
+        guard let url = URL(string:"App-Prefs:root=WIFI"),
+            UIApplication.shared.canOpenURL(url) else { return }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
 
