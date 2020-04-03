@@ -209,15 +209,16 @@ struct CaseByCCAA: Codable {
     let sicks: String
     let uci: String
     let deads: String
+    let recovered: String
     
     static func getEmpty() -> CaseByCCAA {
-        CaseByCCAA(CCAAIsoCode: "", date: Date(), cases: "----", sicks: "----", uci: "----", deads: "----")
+        CaseByCCAA(CCAAIsoCode: "", date: Date(), cases: "----", sicks: "----", uci: "----", deads: "----", recovered: "----")
     }
     
     static func getTestList() -> [CaseByCCAA] {
         [
-            CaseByCCAA(CCAAIsoCode: "AR", date: Date(), cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX"),
-            CaseByCCAA(CCAAIsoCode: "AN", date: Date(), cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX")
+            CaseByCCAA(CCAAIsoCode: "AR", date: Date(), cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX", recovered: "XXXX"),
+            CaseByCCAA(CCAAIsoCode: "AN", date: Date(), cases: "XXXX", sicks: "XXXX", uci: "XXXX", deads: "XXXX", recovered: "XXXX")
         ]
     }
 }

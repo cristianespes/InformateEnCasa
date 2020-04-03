@@ -67,33 +67,35 @@ final class CSVManager {
                     var textScanner = Scanner(string: textToScan)
                    
                     while !textScanner.isAtEnd {
-                       if (textScanner.string as NSString).substring(to: 1) == "\"" {
-                           textScanner.currentIndex = textScanner.string.index(after: textScanner.currentIndex)
+                        if (textScanner.string as NSString).substring(to: 1) == "\"" {
+                            textScanner.currentIndex = textScanner.string.index(after: textScanner.currentIndex)
 
-                           value = textScanner.scanUpToString("\"")
-                           textScanner.currentIndex = textScanner.string.index(after: textScanner.currentIndex)
-                       } else {
-                           value = textScanner.scanUpToString(",")
-                       }
+                            value = textScanner.scanUpToString("\"")
+                            textScanner.currentIndex = textScanner.string.index(after: textScanner.currentIndex)
+                        } else {
+                            value = textScanner.scanUpToString(",")
+                        }
 
                         values.append(value! as String)
 
-                    if !textScanner.isAtEnd {
-                        let indexPlusOne = textScanner.string.index(after: textScanner.currentIndex)
+                        if !textScanner.isAtEnd {
+                            let indexPlusOne = textScanner.string.index(after: textScanner.currentIndex)
 
-                        textToScan = String(textScanner.string[indexPlusOne...])
-                    } else {
-                        textToScan = ""
-                    }
-                    
-                    textScanner = Scanner(string: textToScan)
+                            textToScan = String(textScanner.string[indexPlusOne...])
+                            } else {
+                                textToScan = ""
+                            }
+                        
+                            textScanner = Scanner(string: textToScan)
+                        }
+                } else  {
+                    values = line.components(separatedBy: ",")
                 }
-           } else  {
-               values = line.components(separatedBy: ",")
-           }
-
-                let caseByCCAA = CaseByCCAA(CCAAIsoCode: values[0], date: dateFormatter.date(from: values[1]), cases: values[2], sicks: values[3], uci: values[4], deads: values[5])
-                items.append(caseByCCAA)
+                
+                if values.count >= 6 {
+                    let caseByCCAA = CaseByCCAA(CCAAIsoCode: values[0], date: dateFormatter.date(from: values[1]), cases: values[2], sicks: values[3], uci: values[4], deads: values[5], recovered: values[6])
+                    items.append(caseByCCAA)
+                }
             }
         }
         

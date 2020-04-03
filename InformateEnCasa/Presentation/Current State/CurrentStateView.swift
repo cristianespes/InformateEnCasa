@@ -131,6 +131,20 @@ struct CurrentStateView: View {
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal)
                     }
+                    
+                    VStack(spacing: 8) {
+                        Text("Recuperados")
+                            .font(.body)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                        
+                        Text(self.viewModel.getData().recovered)
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal)
+                    }
                 }
                 .animation(.none)
             }
