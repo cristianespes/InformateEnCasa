@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190AA94B243636AA00A0AAF6 /* EmergencyCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190AA94A243636AA00A0AAF6 /* EmergencyCallViewModel.swift */; };
 		194ABCD4243000370052F103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194ABCD3243000370052F103 /* AppDelegate.swift */; };
 		194ABCD6243000370052F103 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194ABCD5243000370052F103 /* SceneDelegate.swift */; };
 		194ABCD8243000370052F103 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194ABCD7243000370052F103 /* ContentView.swift */; };
@@ -14,9 +15,22 @@
 		194ABCDD2430003A0052F103 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194ABCDC2430003A0052F103 /* Preview Assets.xcassets */; };
 		194ABCE02430003A0052F103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194ABCDE2430003A0052F103 /* LaunchScreen.storyboard */; };
 		194ABCEA2430127D0052F103 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194ABCE92430127D0052F103 /* Model.swift */; };
+		195070FB2433966D00C4BB37 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195070FA2433966D00C4BB37 /* Color+Extension.swift */; };
+		195F19BD2433A2B4001581EC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F19BC2433A2B4001581EC /* ActivityIndicator.swift */; };
+		195F19C02433A6E5001581EC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F19BF2433A6E5001581EC /* SplashScreenView.swift */; };
+		199AEB7B24363A4F00DF8477 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199AEB7A24363A4F00DF8477 /* SplashScreenViewModel.swift */; };
+		199AEB7D24363CAB00DF8477 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199AEB7C24363CAB00DF8477 /* ContentViewModel.swift */; };
+		199AEB7F2436410C00DF8477 /* CurrentStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199AEB7E2436410C00DF8477 /* CurrentStateViewModel.swift */; };
+		19A045FB243262DD0064D384 /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FA243262DD0064D384 /* CSVManager.swift */; };
+		19A045FE243265740064D384 /* CardCCAAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FD243265740064D384 /* CardCCAAView.swift */; };
+		19A04600243268D50064D384 /* EmergencyCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FF243268D50064D384 /* EmergencyCallView.swift */; };
+		19A0460324326FD50064D384 /* CurrentStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A0460224326FD50064D384 /* CurrentStateView.swift */; };
+		FEA440DA0DC462B7BABEDBC2 /* Pods_InformateEnCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604535CA9B3F8F26399C4BC /* Pods_InformateEnCasa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030F803D87D702109D6F9DD9 /* Pods-InformateEnCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InformateEnCasa.release.xcconfig"; path = "Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa.release.xcconfig"; sourceTree = "<group>"; };
+		190AA94A243636AA00A0AAF6 /* EmergencyCallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCallViewModel.swift; sourceTree = "<group>"; };
 		194ABCD0243000370052F103 /* InformateEnCasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InformateEnCasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194ABCD3243000370052F103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		194ABCD5243000370052F103 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +40,20 @@
 		194ABCDF2430003A0052F103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		194ABCE12430003A0052F103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		194ABCE92430127D0052F103 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		195070FA2433966D00C4BB37 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		195F19BC2433A2B4001581EC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		195F19BF2433A6E5001581EC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		199AEB7A24363A4F00DF8477 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
+		199AEB7C24363CAB00DF8477 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		199AEB7E2436410C00DF8477 /* CurrentStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStateViewModel.swift; sourceTree = "<group>"; };
+		19A045FA243262DD0064D384 /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
+		19A045FD243265740064D384 /* CardCCAAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCCAAView.swift; sourceTree = "<group>"; };
+		19A045FF243268D50064D384 /* EmergencyCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCallView.swift; sourceTree = "<group>"; };
+		19A0460224326FD50064D384 /* CurrentStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStateView.swift; sourceTree = "<group>"; };
+		19D53FE324350F6C001BA50E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19D53FE9243511F1001BA50E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B604535CA9B3F8F26399C4BC /* Pods_InformateEnCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InformateEnCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8213C9E312B12907A75A20F /* Pods-InformateEnCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InformateEnCasa.debug.xcconfig"; path = "Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA440DA0DC462B7BABEDBC2 /* Pods_InformateEnCasa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +73,8 @@
 			children = (
 				194ABCD2243000370052F103 /* InformateEnCasa */,
 				194ABCD1243000370052F103 /* Products */,
+				C3B905D3BB9D28197C10D43F /* Pods */,
+				40A4D0DC1FDEE215F30DD34B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,12 +91,16 @@
 			children = (
 				194ABCD3243000370052F103 /* AppDelegate.swift */,
 				194ABCD5243000370052F103 /* SceneDelegate.swift */,
-				194ABCD7243000370052F103 /* ContentView.swift */,
+				19A4D3662433978A00730BE5 /* Extensions */,
+				19A4D367243397AB00730BE5 /* Presentation */,
+				19A045FC243265530064D384 /* Custom Views */,
+				19A4D368243397CB00730BE5 /* Model */,
+				19A045F9243262CC0064D384 /* Manager */,
 				194ABCD92430003A0052F103 /* Assets.xcassets */,
 				194ABCDE2430003A0052F103 /* LaunchScreen.storyboard */,
 				194ABCE12430003A0052F103 /* Info.plist */,
 				194ABCDB2430003A0052F103 /* Preview Content */,
-				194ABCE92430127D0052F103 /* Model.swift */,
+				19D53FE024350F3C001BA50E /* Firebase */,
 			);
 			path = InformateEnCasa;
 			sourceTree = "<group>";
@@ -78,6 +113,128 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		195F19BE2433A6C8001581EC /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				195F19BF2433A6E5001581EC /* SplashScreenView.swift */,
+				199AEB7A24363A4F00DF8477 /* SplashScreenViewModel.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		195F19C12433A7D1001581EC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				194ABCD7243000370052F103 /* ContentView.swift */,
+				199AEB7C24363CAB00DF8477 /* ContentViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		19A045F9243262CC0064D384 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				19A045FA243262DD0064D384 /* CSVManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		19A045FC243265530064D384 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				19A045FD243265740064D384 /* CardCCAAView.swift */,
+				195F19BC2433A2B4001581EC /* ActivityIndicator.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		19A04601243269BE0064D384 /* Emergency Call */ = {
+			isa = PBXGroup;
+			children = (
+				19A045FF243268D50064D384 /* EmergencyCallView.swift */,
+				190AA94A243636AA00A0AAF6 /* EmergencyCallViewModel.swift */,
+			);
+			path = "Emergency Call";
+			sourceTree = "<group>";
+		};
+		19A0460424326FE80064D384 /* Current State */ = {
+			isa = PBXGroup;
+			children = (
+				19A0460224326FD50064D384 /* CurrentStateView.swift */,
+				199AEB7E2436410C00DF8477 /* CurrentStateViewModel.swift */,
+			);
+			path = "Current State";
+			sourceTree = "<group>";
+		};
+		19A4D3662433978A00730BE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				195070FA2433966D00C4BB37 /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		19A4D367243397AB00730BE5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				195F19BE2433A6C8001581EC /* SplashScreen */,
+				195F19C12433A7D1001581EC /* Main */,
+				19A04601243269BE0064D384 /* Emergency Call */,
+				19A0460424326FE80064D384 /* Current State */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		19A4D368243397CB00730BE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				194ABCE92430127D0052F103 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19D53FE024350F3C001BA50E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				19D53FE8243511F1001BA50E /* Debug */,
+				19D53FE124350F51001BA50E /* Release */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		19D53FE124350F51001BA50E /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				19D53FE324350F6C001BA50E /* GoogleService-Info.plist */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
+		19D53FE8243511F1001BA50E /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				19D53FE9243511F1001BA50E /* GoogleService-Info.plist */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		40A4D0DC1FDEE215F30DD34B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B604535CA9B3F8F26399C4BC /* Pods_InformateEnCasa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3B905D3BB9D28197C10D43F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8213C9E312B12907A75A20F /* Pods-InformateEnCasa.debug.xcconfig */,
+				030F803D87D702109D6F9DD9 /* Pods-InformateEnCasa.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +242,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 194ABCE42430003A0052F103 /* Build configuration list for PBXNativeTarget "InformateEnCasa" */;
 			buildPhases = (
+				5C6159BC7E4C30B2BBAF339E /* [CP] Check Pods Manifest.lock */,
 				194ABCCC243000370052F103 /* Sources */,
 				194ABCCD243000370052F103 /* Frameworks */,
 				194ABCCE243000370052F103 /* Resources */,
+				41E33D144E5D2C502D77E5C9 /* [CP] Embed Pods Frameworks */,
+				19D53FE724351088001BA50E /* Setup Firebase Environment GoogleServices-Info.plist */,
+				1958172524351543006F08FA /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -144,14 +305,104 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1958172524351543006F08FA /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		19D53FE724351088001BA50E /* Setup Firebase Environment GoogleServices-Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Setup Firebase Environment GoogleServices-Info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/InformateEnCasa/Firebase/Debug/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/InformateEnCasa/Firebase/Release/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\necho \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\nexit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\necho \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\nexit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Release\" ]\nthen\necho \"Using ${GOOGLESERVICE_INFO_PROD}\"\ncp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelse\necho \"Using ${GOOGLESERVICE_INFO_DEV}\"\ncp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n";
+		};
+		41E33D144E5D2C502D77E5C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InformateEnCasa/Pods-InformateEnCasa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C6159BC7E4C30B2BBAF339E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InformateEnCasa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		194ABCCC243000370052F103 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199AEB7F2436410C00DF8477 /* CurrentStateViewModel.swift in Sources */,
+				19A0460324326FD50064D384 /* CurrentStateView.swift in Sources */,
+				19A04600243268D50064D384 /* EmergencyCallView.swift in Sources */,
 				194ABCEA2430127D0052F103 /* Model.swift in Sources */,
 				194ABCD4243000370052F103 /* AppDelegate.swift in Sources */,
+				199AEB7B24363A4F00DF8477 /* SplashScreenViewModel.swift in Sources */,
+				195F19C02433A6E5001581EC /* SplashScreenView.swift in Sources */,
+				19A045FB243262DD0064D384 /* CSVManager.swift in Sources */,
 				194ABCD6243000370052F103 /* SceneDelegate.swift in Sources */,
+				195F19BD2433A2B4001581EC /* ActivityIndicator.swift in Sources */,
+				195070FB2433966D00C4BB37 /* Color+Extension.swift in Sources */,
+				199AEB7D24363CAB00DF8477 /* ContentViewModel.swift in Sources */,
+				19A045FE243265740064D384 /* CardCCAAView.swift in Sources */,
+				190AA94B243636AA00A0AAF6 /* EmergencyCallViewModel.swift in Sources */,
 				194ABCD8243000370052F103 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,9 +537,12 @@
 		};
 		194ABCE52430003A0052F103 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8213C9E312B12907A75A20F /* Pods-InformateEnCasa.debug.xcconfig */;
 			buildSettings = {
+				APP_DISPLAY_NAME = "Debug Infórmate en casa";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"InformateEnCasa/Preview Content\"";
 				DEVELOPMENT_TEAM = PMY79A3SW7;
 				ENABLE_PREVIEWS = YES;
@@ -298,16 +552,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.celapps.informateencasa;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.celapps.informateencasa.debug;
+				PRODUCT_NAME = InformateEnCasa;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		194ABCE62430003A0052F103 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 030F803D87D702109D6F9DD9 /* Pods-InformateEnCasa.release.xcconfig */;
 			buildSettings = {
+				APP_DISPLAY_NAME = "Infórmate en casa";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"InformateEnCasa/Preview Content\"";
@@ -320,9 +576,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.celapps.informateencasa;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = InformateEnCasa;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
