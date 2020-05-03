@@ -10,13 +10,14 @@ import SwiftUI
 
 struct CardCCAAView: View {
     let region: Region
+    static let width: CGFloat = 220
     
     var body: some View {
         Image(region.getImage())
             .resizable()
             .renderingMode(.original)
             .aspectRatio(contentMode: .fill)
-            .frame(width: 220, height: 160)
+            .frame(width: CardCCAAView.width, height: 160)
                 .cornerRadius(8)
                 .shadow(color: .gray, radius: 4)
             .padding(8)

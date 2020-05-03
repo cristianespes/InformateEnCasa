@@ -18,7 +18,7 @@ struct CurrentStateView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 16) {
                 Text("Estado según la comunidad autónoma")
-                    .font(.largeTitle)
+                    .font(.system(.largeTitle, design: .rounded))
                     .bold()
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
@@ -26,13 +26,13 @@ struct CurrentStateView: View {
                 
                 Group {
                     Text("Pulse aquí para seleccionar una comunidad autónoma y mostrar sus datos")
-                        .font(.body)
+                        .font(.system(.body, design: .rounded))
                         .foregroundColor(Color.gray)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
                     
                     Text(self.viewModel.regions[viewModel.currentSelection].getName())
-                        .font(.title)
+                        .font(.system(.title, design: .rounded))
                         .bold()
                         .padding(.bottom, viewModel.showPicker ? 0 : 16)
                 }
@@ -64,13 +64,13 @@ struct CurrentStateView: View {
                 VStack(spacing: 20) {
                     VStack(spacing: 8) {
                         Text("Última actualización")
-                            .font(.body)
+                            .font(.system(.body, design: .rounded))
                             .foregroundColor(Color.gray)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
                         
                         Text(self.viewModel.getDate())
-                            .font(.title)
+                            .font(.system(.title, design: .rounded))
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal)
@@ -78,13 +78,13 @@ struct CurrentStateView: View {
                     
                     VStack(spacing: 8) {
                         Text("Infectados")
-                            .font(.body)
+                            .font(.system(.body, design: .rounded))
                             .foregroundColor(Color.gray)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
                         
                         Text(self.viewModel.getData().cases)
-                            .font(.title)
+                            .font(.system(.title, design: .rounded))
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal)
@@ -92,13 +92,13 @@ struct CurrentStateView: View {
                     
                     VStack(spacing: 8) {
                         Text("Hospitalizados")
-                            .font(.body)
+                            .font(.system(.body, design: .rounded))
                             .foregroundColor(Color.gray)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
                         
                         Text(self.viewModel.getData().sicks)
-                            .font(.title)
+                            .font(.system(.title, design: .rounded))
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal)
@@ -106,13 +106,13 @@ struct CurrentStateView: View {
                     
                     VStack(spacing: 8) {
                         Text("UCI")
-                            .font(.body)
+                            .font(.system(.body, design: .rounded))
                             .foregroundColor(Color.gray)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
                         
                         Text(self.viewModel.getData().uci)
-                            .font(.title)
+                            .font(.system(.title, design: .rounded))
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal)
@@ -120,13 +120,13 @@ struct CurrentStateView: View {
                     
                     VStack(spacing: 8) {
                         Text("Fallecidos")
-                            .font(.body)
+                            .font(.system(.body, design: .rounded))
                             .foregroundColor(Color.gray)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
                         
                         Text(self.viewModel.getData().deads)
-                            .font(.title)
+                            .font(.system(.title, design: .rounded))
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal)
@@ -134,13 +134,13 @@ struct CurrentStateView: View {
                     
                     VStack(spacing: 8) {
                         Text("Recuperados")
-                            .font(.body)
+                            .font(.system(.body, design: .rounded))
                             .foregroundColor(Color.gray)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
                         
                         Text(self.viewModel.getData().recovered)
-                            .font(.title)
+                            .font(.system(.title, design: .rounded))
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal)
