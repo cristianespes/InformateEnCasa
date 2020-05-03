@@ -25,6 +25,7 @@
 		19A045FE243265740064D384 /* CardCCAAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FD243265740064D384 /* CardCCAAView.swift */; };
 		19A04600243268D50064D384 /* EmergencyCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A045FF243268D50064D384 /* EmergencyCallView.swift */; };
 		19A0460324326FD50064D384 /* CurrentStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A0460224326FD50064D384 /* CurrentStateView.swift */; };
+		19C61726244F3F3400CC52DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C61725244F3F3400CC52DE /* PagingScrollView.swift */; };
 		FEA440DA0DC462B7BABEDBC2 /* Pods_InformateEnCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604535CA9B3F8F26399C4BC /* Pods_InformateEnCasa.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		19A045FD243265740064D384 /* CardCCAAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCCAAView.swift; sourceTree = "<group>"; };
 		19A045FF243268D50064D384 /* EmergencyCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCallView.swift; sourceTree = "<group>"; };
 		19A0460224326FD50064D384 /* CurrentStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStateView.swift; sourceTree = "<group>"; };
+		19C61725244F3F3400CC52DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		19D53FE324350F6C001BA50E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19D53FE9243511F1001BA50E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B604535CA9B3F8F26399C4BC /* Pods_InformateEnCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InformateEnCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 			children = (
 				19A045FD243265740064D384 /* CardCCAAView.swift */,
 				195F19BC2433A2B4001581EC /* ActivityIndicator.swift */,
+				19C61725244F3F3400CC52DE /* PagingScrollView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				199AEB7F2436410C00DF8477 /* CurrentStateViewModel.swift in Sources */,
+				19C61726244F3F3400CC52DE /* PagingScrollView.swift in Sources */,
 				19A0460324326FD50064D384 /* CurrentStateView.swift in Sources */,
 				19A04600243268D50064D384 /* EmergencyCallView.swift in Sources */,
 				194ABCEA2430127D0052F103 /* Model.swift in Sources */,
